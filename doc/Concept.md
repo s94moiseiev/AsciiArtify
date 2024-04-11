@@ -21,3 +21,31 @@ This document presents a comparative analysis of three tools for deploying local
 
 # Demonstration
 
+Demonstration of using kind to deploy a "Hello World" application on Kubernetes:
+
+[![asciicast](https://asciinema.org/a/G3OQ3GfpKcUarUkMjlhyjcvW1.svg)](https://asciinema.org/a/G3OQ3GfpKcUarUkMjlhyjcvW1)
+
+```bash
+# Create a kind Kubernetes cluster
+kind create cluster
+
+# Check cluster status
+kubectl cluster-info
+
+# Deploy the "Hello World" application
+kubectl create deployment hello-world --image=gcr.io/google-samples/hello-app:1.0
+
+# Expose the application to external access
+kubectl expose deployment hello-world --type=NodePort --port=8080
+
+# Check access to the application
+kubectl get service hello-world
+
+# Forward the port to localhost
+kubectl port-forward svc/hello-world 8080:8080
+
+```
+
+#Conclusions
+
+Considering the needs of the "AsciiArtify" startup and the features of each tool, it is recommended to use kind for the PoC. kind provides flexibility and ease of use, has an active Kubernetes community, and broad Kubernetes support. Additionally, considering potential issues with Docker licensing, an alternative option could be Podman instead of Docker. Podman offers similar functionality but does not have licensing restrictions, which may reduce risks for the startup.
