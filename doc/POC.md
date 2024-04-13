@@ -34,6 +34,7 @@ More detailed installation instructions can be found via the [CLI installation d
 [![asciicast](https://asciinema.org/a/0AViQNtaLEMEEfaxJosG6rKKX.svg)](https://asciinema.org/a/0AViQNtaLEMEEfaxJosG6rKKX)
 
 ```bash
+argocd login --core
 kubectl config set-context --current --namespace=argocd
 kubectl config get-contexts -o name
 ```
