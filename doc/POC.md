@@ -53,6 +53,10 @@ After that, go to the ports section and click on the port 8443 to open in the br
 
 Let's create a demo application by taking it [from the documentation](https://argo-cd.readthedocs.io/en/stable/getting_started/#6-create-an-application-from-a-git-repository "from the documentation")
 
+### Creating Apps Via CLI
+[![asciicast](https://asciinema.org/a/LlRHRBNoMMxuzmynh85FSg6w9.svg)](https://asciinema.org/a/LlRHRBNoMMxuzmynh85FSg6w9)
+
+### Creating Apps Via UI
 [![Demonstrate Basic Functionality](https://i9.ytimg.com/vi_webp/jPQEpqUxns8/mq1.webp?sqp=CNTV6rAG&rs=AOn4CLAZr8e-5RSlkkTNJFaxDaHd7p8qAQ "Demonstrate Basic Functionality")](https://youtu.be/jPQEpqUxns8 "Demonstrate Basic Functionality")
 
 # Conclusions
