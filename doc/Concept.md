@@ -21,13 +21,13 @@ This document presents a comparative analysis of three tools for deploying local
 
 # Demonstration
 
-Demonstration of using kind to deploy a "Hello World" application on Kubernetes:
+Demonstration of using k3d to deploy a "Hello World" application on Kubernetes:
 
-[![asciicast](https://asciinema.org/a/G3OQ3GfpKcUarUkMjlhyjcvW1.svg)](https://asciinema.org/a/G3OQ3GfpKcUarUkMjlhyjcvW1)
+[![asciicast](https://asciinema.org/a/lE8AadUJuOpKDovLhnLkYLPl2.svg)](https://asciinema.org/a/lE8AadUJuOpKDovLhnLkYLPl2)
 
 ```bash
 # Create a kind Kubernetes cluster
-kind create cluster
+k3d cluster create demo
 
 # Check cluster status
 kubectl cluster-info
@@ -48,4 +48,4 @@ kubectl port-forward svc/hello-world 8080:8080
 
 #Conclusions
 
-Considering the needs of the "AsciiArtify" startup and the features of each tool, it is recommended to use kind for the PoC. kind provides flexibility and ease of use, has an active Kubernetes community, and broad Kubernetes support. Additionally, considering potential issues with Docker licensing, an alternative option could be Podman instead of Docker. Podman offers similar functionality but does not have licensing restrictions, which may reduce risks for the startup.
+Considering the needs of the "AsciiArtify" startup and the features of each tool, it is recommended to use k3d for the PoC. k3d provides flexibility and ease of use, has an active community, and broad Kubernetes support. Additionally, considering potential issues with Docker licensing, an alternative option could be Podman instead of Docker. Podman offers similar functionality but does not have licensing restrictions, which may reduce risks for the startup.
