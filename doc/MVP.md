@@ -59,7 +59,7 @@ More detailed installation instructions can be found via the [CLI installation d
 - Navigate to the ArgoCD UI and observe the deployment status of the go-demo-app.
 - Verify that changes from the GitHub repository are automatically synchronized and deployed onto the Kubernetes cluster.
 
-[![Accessing ArgoCD UI](https://img.youtube.com/vi/qLXZUJJAivY/default.jpg "Accessing ArgoCD UI")](http:/https://youtu.be/qLXZUJJAivY/ "Accessing ArgoCD UI")
+[![Accessing ArgoCD UI](https://img.youtube.com/vi/qLXZUJJAivY/default.jpg "Accessing ArgoCD UI")]([http:/https://youtu.be/qLXZUJJAivY/](https://youtu.be/qLXZUJJAivY) "Accessing ArgoCD UI")
 
 ### Test Application
 ```bash
