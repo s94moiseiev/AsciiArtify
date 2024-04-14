@@ -12,6 +12,7 @@ The Minimum Viable Product (MVP) for the AsciiArtify project aims to deploy a ba
   k3d cluster create demo
   kubectl cluster-info
 ```
+[![asciicast](https://asciinema.org/a/A0b9pKwb9g76RyGYQ9kktHGbf.svg)](https://asciinema.org/a/A0b9pKwb9g76RyGYQ9kktHGbf)
 
 ### 2. Install ArgoCD
 - Follow the official ArgoCD documentation to install ArgoCD on the Kubernetes cluster.
@@ -20,6 +21,7 @@ The Minimum Viable Product (MVP) for the AsciiArtify project aims to deploy a ba
   kubectl create namespace argocd
   kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
+[![asciicast](https://asciinema.org/a/np0sHVCgdJT5drNVHrbtpxy9w.svg)](https://asciinema.org/a/np0sHVCgdJT5drNVHrbtpxy9w)
 
 ### 3. Configure Application in ArgoCD
 - Download Argo CD CLI
@@ -31,6 +33,7 @@ More detailed installation instructions can be found via the [CLI installation d
   argocd login --core
   argocd app create demo --repo https://github.com/den-vasyliev/go-demo-app.git --path helm  --dest-server https://kubernetes.default.svc --dest-namespace demo
 ```
+[![asciicast](https://asciinema.org/a/3tbpjUdcQSUqFas3jS0ljjZPT.svg)](https://asciinema.org/a/3tbpjUdcQSUqFas3jS0ljjZPT)
 
 ### 4. Demonstrate Application Deployment
 - Deploy the go-demo-app using ArgoCD onto the Kubernetes cluster.
@@ -39,6 +42,7 @@ More detailed installation instructions can be found via the [CLI installation d
   argocd app get demo
   argocd app sync demo
 ```
+[![asciicast](https://asciinema.org/a/5my7cvBh5goJHyhbdZTqMD24x.svg)](https://asciinema.org/a/5my7cvBh5goJHyhbdZTqMD24x)
 
 ## Demo Instructions
 
@@ -48,13 +52,23 @@ More detailed installation instructions can be found via the [CLI installation d
   argocd admin initial-password -n argocd
   kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
-
 ### Accessing ArgoCD UI
 - Open a web browser and navigate to [https://localhost:8080](https://localhost:8080) to access the ArgoCD UI.
 
 ### Monitoring Application Deployment
 - Navigate to the ArgoCD UI and observe the deployment status of the go-demo-app.
 - Verify that changes from the GitHub repository are automatically synchronized and deployed onto the Kubernetes cluster.
+
+[![Accessing ArgoCD UI](https://img.youtube.com/vi/qLXZUJJAivY/default.jpg "Accessing ArgoCD UI")](http:/https://youtu.be/qLXZUJJAivY/ "Accessing ArgoCD UI")
+
+### Test Application
+```bash
+  kubectl port-forward svc/ambassador -n demo2 8088:80
+  curl localhost:8088
+  wget -O /tmp/google.png https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png
+  curl -F 'image=@/tmp/google.png' localhost:8088/img/
+```
+[![Test Application](https://img.youtube.com/vi/uHruOaoXOIc/default.jpg "Test Application")](https://youtu.be/uHruOaoXOIc/ "Test Application")
 
 ## Conclusion
 The MVP demonstrates the automated deployment of the go-demo-app using ArgoCD on a Kubernetes cluster provisioned with k3d. This setup enables the AsciiArtify team to efficiently manage application deployments and iterate on features based on user feedback.
