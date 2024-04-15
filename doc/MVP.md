@@ -61,6 +61,10 @@ More detailed installation instructions can be found via the [CLI installation d
 
 [![Accessing ArgoCD UI](https://img.youtube.com/vi/qLXZUJJAivY/default.jpg "Accessing ArgoCD UI")](https://youtu.be/qLXZUJJAivY "Accessing ArgoCD UI")
 
+### Demo autosync
+Enable autosync demo for AgroCD and control changes in Git repo.
+[![Demo agrocd autosync](https://img.youtube.com/vi/Q37PMmgKtj4/default.jpg "Demo agrocd autosync")](https://youtu.be/Q37PMmgKtj4  "Demo agrocd autosync")
+
 ### Test Application
 ```bash
   kubectl port-forward svc/ambassador -n demo2 8088:80
